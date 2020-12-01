@@ -1,0 +1,9 @@
+-o user escolhe que quer treinar
+
+-onde vai treinar
+
+-o material que tem
+
+-numero que exercicios que quer
+
+-app gera o treino
