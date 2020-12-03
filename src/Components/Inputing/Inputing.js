@@ -8,14 +8,14 @@ function Inputing(){
 
         <div className="workout">
             <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                <h1>heee</h1>
-                <h2>dsdsa</h2>
+                <h1>O que treinar</h1>
+                <h2>...</h2>
             </Grid>
         </div>
         
         <div className="Outside_indoor">
             <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                <h1>Onde treinar?</h1>
+                <h1>Onde treinar</h1>
                 <h1>....</h1>
             </Grid>
         </div>
@@ -36,7 +36,7 @@ function Inputing(){
 
         <div className="Outside_indoor">
             <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                <h1>button</h1>
+                <h1>button submmit</h1>
                 <h1>....</h1>
             </Grid>
         </div>
