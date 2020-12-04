@@ -1,16 +1,59 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-
+import './Inputing.css';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Col, Row } from 'react-bootstrap';
+import { Container } from '@material-ui/core';
+import Checkbox from '@material-ui/core/Checkbox';
 
 function Inputing(){
     return(
-        <div>
-
+        <div className="inputing">
+        
+        <form>
         <div className="workout">
-            <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                <h1>O que treinar</h1>
-                <h2>...</h2>
-            </Grid>
+                <Accordion>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
+                        <h1>Workout</h1>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Container>
+                            <Row>
+                                <Col>
+                                <Checkbox color="primary" name="" />
+                                <label>Chest</label>
+                                </Col>
+                                <Col>
+                                <Checkbox color="primary" name="" />
+                                <label>Back</label>
+                                </Col>
+                            </Row>
+                            <Row>
+                            <Col>
+                                <Checkbox color="primary" name="" />
+                                <label>Leg</label>
+                                </Col>
+                                <Col>
+                                <Checkbox color="primary" name="" />
+                                <label>Shoulder</label>
+                                </Col>
+                            </Row>
+                            <Row>
+                            <Col>
+                                <Checkbox color="primary" name="" />
+                                <label>Bicep</label>
+                                </Col>
+                                <Col>
+                                <Checkbox color="primary" name="" />
+                                <label>Tricep</label>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </AccordionDetails>
+                </Accordion>
         </div>
         
         <div className="Outside_indoor">
@@ -40,7 +83,7 @@ function Inputing(){
                 <h1>....</h1>
             </Grid>
         </div>
-
+        </form>
         </div>
     );
 }
