@@ -16,7 +16,7 @@ function Inputing(){
         <form>
         <div className="workout">
                 <Accordion>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
+                    <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon/>}>
                         <h1>Workout</h1>
                     </AccordionSummary>
                     <AccordionDetails>
