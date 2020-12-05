@@ -6,11 +6,14 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Col, Row } from 'react-bootstrap';
-import { Container, makeStyles, MenuItem } from '@material-ui/core';
+import { Container, FormGroup, makeStyles, MenuItem } from '@material-ui/core';
 import Checkbox from '@material-ui/core/Checkbox';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
 
 
 function Inputing() {
@@ -20,6 +23,10 @@ function Inputing() {
     const updatePlace = (event) => {
         console.warn(event.target.value);
         setPlace(event.target.value);
+    }
+
+    const updateQuantity = (e) => {
+        console.warn(e.target.value);
     }
 
     return (
@@ -68,13 +75,14 @@ function Inputing() {
                     </Accordion>
                 </div>
 
+                <br />
                 <div className="Outside_indoor">
                     <Grid container direction="column" justify="space-around" alignItems="flex-start">
 
-                        <InputLabel id="place-filled-label">Onde treinar</InputLabel>
+                        <InputLabel id="place-filled-label" className="title">Onde treinar</InputLabel>
 
-                        <FormControl variant="filled" className="inputForm col-12"> 
-                            <Select lavelId="place-filled-label" id="place-select-filled" value={place} onChange={updatePlace}>
+                        <FormControl variant="filled" className="inputForm" fullWidth>
+                            <Select labelId="place-filled-label" id="place-select-filled" value={place} onChange={updatePlace} className="title">
                                 <MenuItem value={1}>Opção 1</MenuItem>
                                 <MenuItem value={2}>Opção 2</MenuItem>
                                 <MenuItem value={3}>Opção 3</MenuItem>
@@ -86,24 +94,26 @@ function Inputing() {
                     </Grid>
                 </div>
 
+                <br />
                 <div className="Outside_indoor">
                     <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                        <h1>NUMERO DE EXERCICIOS</h1>
-                        <h1>....</h1>
+
+                        <InputLabel id="exerciseQuantity" className="title">Quantidade de exercicios</InputLabel>
+
+                        <TextField className="title" id="exerciseQuantity" type="number" variant="filled" fullWidth onChange={updateQuantity}>
+
+                        </TextField>
+
                     </Grid>
                 </div>
 
-                <div className="Outside_indoor">
-                    <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                        <h1>Numero exercicios</h1>
-                        <h1>....</h1>
-                    </Grid>
-                </div>
 
+                <br />
                 <div className="Outside_indoor">
                     <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                        <h1>button submmit</h1>
-                        <h1>....</h1>
+                        <Button variant="contained" color="primary" fullWidth>
+                            Primary
+                        </Button>
                     </Grid>
                 </div>
             </form>
