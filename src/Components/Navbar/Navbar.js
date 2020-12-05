@@ -17,7 +17,7 @@ const Navbar = () => {
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
   <a className="navbar-brand" href="#">Workout Generator</a>
-    <ul className="navbar-nav mr-auto">
+    <ul className="navbar-nav ml-auto ">
       <li className="nav-item active">
         <a className="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
