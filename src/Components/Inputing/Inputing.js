@@ -73,7 +73,7 @@ function Inputing() {
 
                         <InputLabel id="place-filled-label">Onde treinar</InputLabel>
 
-                        <FormControl variant="filled" className="inputForm"> 
+                        <FormControl variant="filled" className="inputForm col-12"> 
                             <Select lavelId="place-filled-label" id="place-select-filled" value={place} onChange={updatePlace}>
                                 <MenuItem value={1}>Opção 1</MenuItem>
                                 <MenuItem value={2}>Opção 2</MenuItem>
