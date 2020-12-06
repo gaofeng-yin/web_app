@@ -28,8 +28,6 @@ function Inputing() {
         setPlace(event.target.value);
     }
 
-    const [quantity, setQuantity] = React.useState(0);
-
     function valuetext(quantity) {
         return `${quantity}`;
     }
@@ -83,7 +81,6 @@ function Inputing() {
 
     return (
         <div className="inputing">
-
             <form>
                 <div className="workout">
                     <Accordion>
@@ -129,11 +126,8 @@ function Inputing() {
 
                 <br />
 
-                <div className="Outside_indoor">
-                    <Grid container direction="column" justify="space-around" alignItems="flex-start">
-
+                <div className="Outside_indoor">                   
                         <div className="Place">
-
                             <Accordion>
                                 <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
                                     <span className="title">Place</span>
@@ -147,16 +141,12 @@ function Inputing() {
                                     </RadioGroup>
                                 </AccordionDetails>
                             </Accordion>
-
-                        </div>
-                    </Grid>
+                        </div>      
                 </div>
 
                 <br />
 
                 <div className="Outside_indoor">
-                    <Grid container direction="column" justify="space-around" alignItems="flex-start">
-
                         <Accordion>
                             <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
                                 <span className="title">Number of exercises</span>
@@ -176,15 +166,11 @@ function Inputing() {
                                 />
                             </AccordionDetails>
                         </Accordion>
-
-                    </Grid>
                 </div>
 
                 <br />
 
                 <div className="Outside_indoor">
-                    <Grid container direction="column" justify="space-around" alignItems="flex-start">
-
                         <Accordion>
                             <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
                                 <span className="title">Equipment</span>
@@ -226,18 +212,14 @@ function Inputing() {
                             </AccordionDetails>
 
                         </Accordion>
-
-                    </Grid>
                 </div>
 
                 <br />
 
                 <div className="Outside_indoor">
-                    <Grid container direction="column" justify="space-around" alignItems="flex-start">
-                        <Button variant="contained" color="primary" fullWidth>
-                            Primary
+                        <Button variant="contained" color="secondary" fullWidth>
+                            Começar Treino!
                         </Button>
-                    </Grid>
                 </div>
 
                 <br />
