@@ -6,14 +6,17 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Col, Row } from 'react-bootstrap';
-import { Container, FormGroup, makeStyles, MenuItem } from '@material-ui/core';
+import { Container, FormGroup, makeStyles, MenuItem, RadioGroup } from '@material-ui/core';
 import Checkbox from '@material-ui/core/Checkbox';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import Radio from '@material-ui/core/Radio';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Slider from '@material-ui/core/Slider';
+import Input from '@material-ui/core/Input';
 
 
 function Inputing() {
@@ -25,9 +28,58 @@ function Inputing() {
         setPlace(event.target.value);
     }
 
-    const updateQuantity = (e) => {
-        console.warn(e.target.value);
+    const [quantity, setQuantity] = React.useState(0);
+
+    function valuetext(quantity) {
+        return `${quantity}`;
     }
+
+    const marks = [
+        {
+            value: 0,
+            label: '0',
+        },
+        {
+            value: 5,
+            label: '5',
+        },
+        {
+            value: 10,
+            label: '10',
+        },
+        {
+            value: 15,
+            label: '15',
+        },
+        {
+            value: 20,
+            label: '20',
+        },
+        {
+            value: 25,
+            label: '25',
+        },
+        {
+            value: 30,
+            label: '30',
+        },
+        {
+            value: 35,
+            label: '35',
+        },
+        {
+            value: 40,
+            label: '40',
+        },
+        {
+            value: 45,
+            label: '45',
+        },
+        {
+            value: 50,
+            label: '50',
+        },
+    ];
 
     return (
         <div className="inputing">
@@ -76,39 +128,110 @@ function Inputing() {
                 </div>
 
                 <br />
+
                 <div className="Outside_indoor">
                     <Grid container direction="column" justify="space-around" alignItems="flex-start">
 
-                        <InputLabel id="place-filled-label" className="title">Onde treinar</InputLabel>
+                        <div className="Place">
 
-                        <FormControl variant="filled" className="inputForm" fullWidth>
-                            <Select labelId="place-filled-label" id="place-select-filled" value={place} onChange={updatePlace} className="title">
-                                <MenuItem value={1}>Opção 1</MenuItem>
-                                <MenuItem value={2}>Opção 2</MenuItem>
-                                <MenuItem value={3}>Opção 3</MenuItem>
-                                <MenuItem value={4}>Opção 4</MenuItem>
-                                <MenuItem value={5}>Opção 5</MenuItem>
-                            </Select>
-                        </FormControl>
+                            <Accordion>
+                                <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
+                                    <span className="title">Place</span>
+                                </AccordionSummary>
+
+                                <AccordionDetails>
+                                    <RadioGroup value={place} onChange={updatePlace}>
+                                        <FormControlLabel value="home" control={<Radio />} label="Home" />
+                                        <FormControlLabel value="gym" control={<Radio />} label="Gym" />
+                                        <FormControlLabel value="outside" control={<Radio />} label="Outside" />
+                                    </RadioGroup>
+                                </AccordionDetails>
+                            </Accordion>
+
+                        </div>
+                    </Grid>
+                </div>
+
+                <br />
+
+                <div className="Outside_indoor">
+                    <Grid container direction="column" justify="space-around" alignItems="flex-start">
+
+                        <Accordion>
+                            <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
+                                <span className="title">Number of exercises</span>
+                            </AccordionSummary>
+
+                            <AccordionDetails>
+                                <Slider
+                                    defaultValue={0}
+                                    getAriaValueText={valuetext}
+                                    aria-labelledby="discrete-slider-small-steps"
+                                    step={1}
+                                    marks
+                                    min={0}
+                                    max={50}
+                                    valueLabelDisplay="auto"
+                                    marks={marks}
+                                />
+                            </AccordionDetails>
+                        </Accordion>
 
                     </Grid>
                 </div>
 
                 <br />
+
                 <div className="Outside_indoor">
                     <Grid container direction="column" justify="space-around" alignItems="flex-start">
 
-                        <InputLabel id="exerciseQuantity" className="title">Quantidade de exercicios</InputLabel>
+                        <Accordion>
+                            <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
+                                <span className="title">Equipment</span>
+                            </AccordionSummary>
 
-                        <TextField className="title" id="exerciseQuantity" type="number" variant="filled" fullWidth onChange={updateQuantity}>
+                            <AccordionDetails>
+                                <Container>
+                                    <Row>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Chest</label>
+                                        </Col>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Back</label>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Leg</label>
+                                        </Col>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Shoulder</label>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Bicep</label>
+                                        </Col>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Tricep</label>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </AccordionDetails>
 
-                        </TextField>
+                        </Accordion>
 
                     </Grid>
                 </div>
 
-
                 <br />
+
                 <div className="Outside_indoor">
                     <Grid container direction="column" justify="space-around" alignItems="flex-start">
                         <Button variant="contained" color="primary" fullWidth>
@@ -116,6 +239,15 @@ function Inputing() {
                         </Button>
                     </Grid>
                 </div>
+
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+
             </form>
         </div>
     );
