@@ -8,7 +8,7 @@ function Outputing(){
     return (
 
         <div className="outputing">
-            <h1>JOSE</h1>
+            <h1>Generated workout!</h1>
         </div>
 
 

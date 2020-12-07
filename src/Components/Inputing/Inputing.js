@@ -45,38 +45,6 @@ function Inputing() {
             value: 10,
             label: '10',
         },
-        {
-            value: 15,
-            label: '15',
-        },
-        {
-            value: 20,
-            label: '20',
-        },
-        {
-            value: 25,
-            label: '25',
-        },
-        {
-            value: 30,
-            label: '30',
-        },
-        {
-            value: 35,
-            label: '35',
-        },
-        {
-            value: 40,
-            label: '40',
-        },
-        {
-            value: 45,
-            label: '45',
-        },
-        {
-            value: 50,
-            label: '50',
-        },
     ];
 
     return (
@@ -160,7 +128,7 @@ function Inputing() {
                                     step={1}
                                     marks
                                     min={0}
-                                    max={50}
+                                    max={10}
                                     valueLabelDisplay="auto"
                                     marks={marks}
                                 />
@@ -181,31 +149,31 @@ function Inputing() {
                                     <Row>
                                         <Col>
                                             <Checkbox color="primary" name="" />
-                                            <label>Chest</label>
+                                            <label>Bench</label>
                                         </Col>
                                         <Col>
                                             <Checkbox color="primary" name="" />
-                                            <label>Back</label>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col>
-                                            <Checkbox color="primary" name="" />
-                                            <label>Leg</label>
-                                        </Col>
-                                        <Col>
-                                            <Checkbox color="primary" name="" />
-                                            <label>Shoulder</label>
+                                            <label>Dumbbell</label>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col>
                                             <Checkbox color="primary" name="" />
-                                            <label>Bicep</label>
+                                            <label>Barbell</label>
                                         </Col>
                                         <Col>
                                             <Checkbox color="primary" name="" />
-                                            <label>Tricep</label>
+                                            <label>Cables</label>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>treadmill</label>
+                                        </Col>
+                                        <Col>
+                                            <Checkbox color="primary" name="" />
+                                            <label>Bicycle</label>
                                         </Col>
                                     </Row>
                                 </Container>
