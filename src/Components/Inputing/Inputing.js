@@ -1,27 +1,21 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import React, {useState} from 'react';
 import './Inputing.css';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Col, Row } from 'react-bootstrap';
-import { Container, FormGroup, makeStyles, MenuItem, RadioGroup } from '@material-ui/core';
+import { Container, RadioGroup } from '@material-ui/core';
 import Checkbox from '@material-ui/core/Checkbox';
-import Select from '@material-ui/core/Select';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Slider from '@material-ui/core/Slider';
-import Input from '@material-ui/core/Input';
 
 
 function Inputing() {
 
-    const [place, setPlace] = React.useState(0);
+    const [place, setPlace] = useState(0);
 
     const updatePlace = (event) => {
         console.warn(event.target.value);
@@ -32,7 +26,7 @@ function Inputing() {
         return `${quantity}`;
     }
 
-    const marks = [
+    const mark = [
         {
             value: 0,
             label: '0',
@@ -130,7 +124,7 @@ function Inputing() {
                                     min={0}
                                     max={10}
                                     valueLabelDisplay="auto"
-                                    marks={marks}
+                                    marks={mark}
                                 />
                             </AccordionDetails>
                         </Accordion>
