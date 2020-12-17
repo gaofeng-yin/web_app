@@ -43,7 +43,7 @@ function Inputing() {
 
     return (
         <div className="inputing">
-            <form>
+            <form method="POST" action="http://localhost:2000/genwork">
                 <div className="workout">
                     <Accordion>
                         <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
@@ -53,32 +53,52 @@ function Inputing() {
                             <Container>
                                 <Row>
                                     <Col>
-                                        <Checkbox color="primary" name="" />
+                                        <Checkbox color="primary" name="workout" value="chest" />
                                         <label>Chest</label>
                                     </Col>
                                     <Col>
-                                        <Checkbox color="primary" name="" />
+                                        <Checkbox color="primary" name="workout" value="back" />
                                         <label>Back</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Checkbox color="primary" name="" />
-                                        <label>Leg</label>
+                                        <Checkbox color="primary" name="workout" value="bicep" />
+                                        <label>Bicep</label>
                                     </Col>
                                     <Col>
-                                        <Checkbox color="primary" name="" />
+                                        <Checkbox color="primary" name="workout" value="tricep" />
+                                        <label>Tricep</label>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <Checkbox color="primary" name="workout" value="forearm" />
+                                        <label>Forearm</label>
+                                    </Col>
+                                    <Col>
+                                        <Checkbox color="primary" name="workout" value="shoulder" />
                                         <label>Shoulder</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Checkbox color="primary" name="" />
-                                        <label>Bicep</label>
+                                        <Checkbox color="primary" name="workout" value="quad" />
+                                        <label>Quad</label>
                                     </Col>
                                     <Col>
-                                        <Checkbox color="primary" name="" />
-                                        <label>Tricep</label>
+                                        <Checkbox color="primary" name="workout" value="hamstring" />
+                                        <label>Hamstring</label>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <Checkbox color="primary" name="workout" value="calves" />
+                                        <label>Calves</label>
+                                    </Col>
+                                    <Col>
+                                        <Checkbox color="primary" name="workout" value="abs" />
+                                        <label>Abs</label>
                                     </Col>
                                 </Row>
                             </Container>
@@ -125,6 +145,7 @@ function Inputing() {
                                     max={10}
                                     valueLabelDisplay="auto"
                                     marks={mark}
+                                    name="quantity"
                                 />
                             </AccordionDetails>
                         </Accordion>
@@ -142,32 +163,32 @@ function Inputing() {
                                 <Container>
                                     <Row>
                                         <Col>
-                                            <Checkbox color="primary" name="" />
+                                            <Checkbox color="primary" name="equipment" value="bench" />
                                             <label>Bench</label>
                                         </Col>
                                         <Col>
-                                            <Checkbox color="primary" name="" />
+                                            <Checkbox color="primary" name=""equipment value="dumbbell" />
                                             <label>Dumbbell</label>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col>
-                                            <Checkbox color="primary" name="" />
+                                            <Checkbox color="primary" name="equipment" value="barbell" />
                                             <label>Barbell</label>
                                         </Col>
                                         <Col>
-                                            <Checkbox color="primary" name="" />
+                                            <Checkbox color="primary" name="equipment" value="cable" />
                                             <label>Cables</label>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col>
-                                            <Checkbox color="primary" name="" />
-                                            <label>treadmill</label>
+                                            <Checkbox color="primary" name="equipment" value="smith machine" />
+                                            <label>Smith machine</label>
                                         </Col>
                                         <Col>
-                                            <Checkbox color="primary" name="" />
-                                            <label>Bicycle</label>
+                                            <Checkbox color="primary" name="equipment" value="leg press" />
+                                            <label>Leg press </label>
                                         </Col>
                                     </Row>
                                 </Container>
@@ -179,7 +200,7 @@ function Inputing() {
                 <br />
 
                 <div className="Outside_indoor">
-                        <Button variant="contained" color="secondary" fullWidth>
+                        <Button type="submit" variant="contained" color="secondary" fullWidth>
                             Começar Treino!
                         </Button>
                 </div>
