@@ -43,7 +43,7 @@ function Inputing() {
 
     return (
         <div className="inputing">
-            <form method="POST" action="http://localhost:2000/genwork">
+            <form method="POST" action="/genwork">
                 <div className="workout">
                     <Accordion>
                         <AccordionSummary className="summary" expandIcon={<ExpandMoreIcon />}>
@@ -116,7 +116,7 @@ function Inputing() {
                                 </AccordionSummary>
 
                                 <AccordionDetails>
-                                    <RadioGroup value={place} onChange={updatePlace}>
+                                    <RadioGroup value={place} onChange={updatePlace} name="place">
                                         <FormControlLabel value="home" control={<Radio />} label="Home" />
                                         <FormControlLabel value="gym" control={<Radio />} label="Gym" />
                                         <FormControlLabel value="outside" control={<Radio />} label="Outside" />
