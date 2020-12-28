@@ -201,7 +201,7 @@ function Inputing() {
 
                 <div className="Outside_indoor">
                         <Button type="submit" variant="contained" color="secondary" fullWidth>
-                            Começar Treino!
+                            Generate Workout
                         </Button>
                 </div>
 
