@@ -167,7 +167,7 @@ function Inputing() {
                                             <label>Bench</label>
                                         </Col>
                                         <Col>
-                                            <Checkbox color="primary" name=""equipment value="dumbbell" />
+                                            <Checkbox color="primary" name="equipment" value="dumbbell" />
                                             <label>Dumbbell</label>
                                         </Col>
                                     </Row>
