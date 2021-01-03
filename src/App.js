@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -10,9 +10,18 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Preferences from './Components/Preferences/Preferences';
 import Navbar from "./Components/Navbar/Navbar";
 
-function App() {
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+}
 
-  const [token, setToken] = useState();
+function getToken() {
+  const tokenString = sessionStorage.getItem('token');
+  const userToken = JSON.parse(tokenString);
+  return userToken?.token
+}
+
+function App() {
+  const token = getToken();
 
   if(!token) {
     return <Login setToken={setToken} />
@@ -24,6 +33,9 @@ function App() {
         <h1>Application</h1>
         <BrowserRouter>
           <Switch>
+            <Route path="/login">
+              <Login/>
+            </Route>
             <Route path="/dashboard">
               <Dashboard />
             </Route>
@@ -34,7 +46,7 @@ function App() {
         </BrowserRouter>
       </div>
 
-      <Navbar />
+      
     </>
   );
 }
