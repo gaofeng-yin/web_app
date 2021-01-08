@@ -16,16 +16,10 @@ import Slider from '@material-ui/core/Slider';
 function Inputing() {
 
     const [place, setPlace] = useState(0);
-    const [workout, setWorkout] = useState(0);
 
     const updatePlace = (event) => {
         console.warn(event.target.value);
         setPlace(event.target.value);
-    }
-
-    const updateWorkout = (event) => {
-        console.warn(event.target.value);
-        setWorkout(event.target.value);
     }
 
     function valuetext(quantity) {
@@ -57,48 +51,56 @@ function Inputing() {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Container>
-                                <RadioGroup value={workout} onChange={updateWorkout} name="workout" required >
                                 <Row>
                                     <Col>
-                                        <FormControlLabel value="chest" control={<Radio />} label="Chest" />  
+                                        <Checkbox color="primary" name="workout" value="chest" />
+                                        <label>Chest</label>
                                     </Col>
                                     <Col>
-                                        <FormControlLabel value="back" control={<Radio />} label="Back" />
+                                        <Checkbox color="primary" name="workout" value="back" />
+                                        <label>Back</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <FormControlLabel value="bicep" control={<Radio />} label="Bicep" />
+                                        <Checkbox color="primary" name="workout" value="bicep" />
+                                        <label>Bicep</label>
                                     </Col>
                                     <Col>
-                                    <   FormControlLabel value="tricep" control={<Radio />} label="Tricep" />
+                                        <Checkbox color="primary" name="workout" value="tricep" />
+                                        <label>Tricep</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <FormControlLabel value="forearm" control={<Radio />} label="Forearm" />
+                                        <Checkbox color="primary" name="workout" value="forearm" />
+                                        <label>Forearm</label>
                                     </Col>
                                     <Col>
-                                        <FormControlLabel value="shoulder" control={<Radio />} label="Shoulder" />
+                                        <Checkbox color="primary" name="workout" value="shoulder" />
+                                        <label>Shoulder</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <FormControlLabel value="quad" control={<Radio />} label="Quad" />
+                                        <Checkbox color="primary" name="workout" value="quad" />
+                                        <label>Quad</label>
                                     </Col>
                                     <Col>
-                                        <FormControlLabel value="hamstring" control={<Radio />} label="Hamstring" />
+                                        <Checkbox color="primary" name="workout" value="hamstring" />
+                                        <label>Hamstring</label>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <FormControlLabel value="calves" control={<Radio />} label="Calves" />
+                                        <Checkbox color="primary" name="workout" value="calves" />
+                                        <label>Calves</label>
                                     </Col>
                                     <Col>
-                                        <FormControlLabel value="abs" control={<Radio />} label="Abs" />
+                                        <Checkbox color="primary" name="workout" value="abs" />
+                                        <label>Abs</label>
                                     </Col>
                                 </Row>
-                                </RadioGroup>
                             </Container>
                         </AccordionDetails>
                     </Accordion>
